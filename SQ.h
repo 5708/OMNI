@@ -18,7 +18,7 @@ public:
 	//Part 2
 	void similarityQuery(double v);
 	void matchCheck();
-	void clearMatchTS();
+	void clearMatchTS(int i);
 	
 	//Part 3
 	
