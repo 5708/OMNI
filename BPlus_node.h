@@ -1,6 +1,6 @@
 #ifndef BPLUS_NODE  
 #define BPLUS_NODE 
-#define NULL 0
+#define ZERO 0
 
 enum NODE_TYPE{INTERNAL, LEAF};
 enum SIBLING_DIRECTION{LEFT, RIGHT};

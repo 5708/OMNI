@@ -52,7 +52,7 @@ void CInternalNode::clear()
     { 
         m_Childs[i]->clear(); 
         delete m_Childs[i]; 
-        m_Childs[i] = NULL; 
+        m_Childs[i] = ZERO; 
     } 
 } 
  
@@ -152,8 +152,8 @@ int CInternalNode::getChildIndex(KeyType key, int keyIndex)const
 // CLeafNode  
 CLeafNode::CLeafNode():CNode(){ 
     setType(LEAF); 
-    setLeftSibling(NULL); 
-    setRightSibling(NULL); 
+    setLeftSibling(ZERO); 
+    setRightSibling(ZERO); 
 } 
  
 CLeafNode::~CLeafNode(){ 
