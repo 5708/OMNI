@@ -3,7 +3,7 @@
  
 #include "BPlus_node.h"  
 #include <vector>  
-#include <Eigen/Dense>
+#include "Eigen/Eigen/Dense"
 #include "Data.h"
 
 using Eigen::MatrixXd;
