@@ -252,3 +252,7 @@ int CLeafNode::getChildIndex(KeyType key, int keyIndex)const
 { 
     return keyIndex; 
 } 
+int CNode::getKeyNum()const
+{
+	return m_KeyNum;
+}

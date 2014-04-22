@@ -22,7 +22,7 @@ public:
 
 	NODE_TYPE getType() const{return m_Type;}
 	void setType(NODE_TYPE type){m_Type=type;}
-	int getKeyNum()const{return m_KeyNum;}
+	int getKeyNum()const;
 	void setKeyNum(int n){m_KeyNum=n;}
 	KeyType getKeyValue(int i)const{return m_KeyValues[i];}
 	void setKeyValue(int i, KeyType key){m_KeyValues[i]=key;}
