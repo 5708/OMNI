@@ -8,8 +8,8 @@ class SQ
 {
 public:
 	double epsilon;
-	vector<vector<int>> singleMatch;
-	vector<vector<vector<int>>> match;
+	vector<vector<int> > singleMatch;
+	vector<vector<vector<int> > > match;
 	int queryLen, tsLen, tsNum;
 
 	//Part 1
