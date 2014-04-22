@@ -2,7 +2,6 @@
 #include "BPlus_node.h"
 #include <iostream>
 #include <algorithm>
-#include <Eigen/Dense>
 #include "Data.h"
 
 using Eigen::MatrixXd;
