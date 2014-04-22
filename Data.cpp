@@ -13,7 +13,7 @@ void Data::read(string filename, int tNum, int tLen, int ttLen, int fNum)
 	tsLen = tLen;
 	totalLen = ttLen;
 	fociNum = fNum;
-	file.open(filename);
+	file.open(filename.c_str());
 	m.resize(tsNum, totalLen);
 	for(int i = 0; i < tsNum; ++i)
 	{
