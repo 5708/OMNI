@@ -41,7 +41,8 @@ void CBPlusTree::BPTbuild(MatrixXd *m){
 		{
 			KeyType k = (*m)(i,j) ;
 			DataType d =i*1000+j;
-			cout<<i<<" "<<j<<endl;
+			if(j == 5)
+				cout<<j;
 			insert(k, d);
 		}
 	}
