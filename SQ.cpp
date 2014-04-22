@@ -92,14 +92,6 @@ void SQ::matchCheck()
 	
 }
 
-void SQ::clearMatchTS(int tsid)
-{
-	for(int i = 0; i < queryLen; ++i)
-	{
-		match[i][tsid].clear();	
-	}
-	matchEI[tsid] = true;
-}
 // Part 3
 
 // Part 4
