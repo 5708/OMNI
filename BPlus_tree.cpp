@@ -89,6 +89,7 @@ void CBPlusTree::recursive_insert(CNode* parentNode, KeyType key, const DataType
 		int keyIndex = parentNode->getKeyIndex(key);
 		int childIndex= parentNode->getChildIndex(key, keyIndex); // get child node index
 		CNode* childNode = ((CInternalNode*)parentNode)->getChild(childIndex);
+		int kkkk = childNode->getKeyNum();
 		if (childNode->getKeyNum()>=MAXNUM_LEAF)  // if child node is full, then split
 		{
 			childNode->split(parentNode, childIndex);     
