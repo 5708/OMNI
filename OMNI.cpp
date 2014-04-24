@@ -7,15 +7,10 @@ OMNI::OMNI()
 OMNI::~OMNI()
 {
 }
-void OMNI::initial(string filename, int tsNum, int tsLen, int ttLen, int fNum)
+void OMNI::initial(string filename, int tsNum, int ttLen)
 {
-	data.read(filename, tsNum, tsLen, ttLen,fNum);
-	cout<<"finish read"<<endl;
-	forest.resize(fNum);
-	for(int i = 0; i < fNum; ++i)
-	{
-		forest[i].BPTbuild(&(data.fd[i]));
-	}
+    cout<<"start initial"<<endl;
+	data.read(filename, tsNum, ttLen);
 	cout<<"finish initial"<<endl;
 }
 
@@ -54,4 +49,17 @@ void OMNI::subsequenceQuery(VectorXd qs, double epsilon)
 	}
 	
 
+}
+void OMNI::reinitial(int tLen, int fNum, int tstNum)
+{
+    cout<<"start reinitial"<<endl;
+    data.initial(tLen, fNum);
+    data.testPick(tstNum);
+    forest.resize(0);
+    forest.resize(fNum);
+	for(int i = 0; i < fNum; ++i)
+	{
+		forest[i].BPTbuild(&(data.fd[i]));
+	}
+    cout<<"end reinitial"<<endl;
 }

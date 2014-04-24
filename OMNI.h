@@ -4,7 +4,7 @@
 #include <vector>
 #include "BPlus_tree.h"
 #include "Data.h"
-#include "SQ.h"
+
 
 using namespace std;
 using Eigen::VectorXd;
@@ -19,8 +19,9 @@ public:
 	MatrixXd tsCount;
 	vector<int> queryResult;
 	
-	void initial(string filename, int tsNum, int tsLen, int ttLen, int fociNum);
+	void initial(string filename, int tsNum, int ttLen);
 	void subsequenceQuery(VectorXd qs, double epsilon);
+    void reinitial(int tLen, int fNum, int tstNum);
 
 
 private:
