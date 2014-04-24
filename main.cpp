@@ -29,7 +29,7 @@ int main()
         e=clock();
         cout<<"time"<<e-s<<"\n\n"<<endl;
         om.data.times.push_back(e-s);
-        om.data.writeTestTS(a);
+        //om.data.writeTestTS(a);
     }
     om.data.write(&(om.queryResult));
 	return 0;

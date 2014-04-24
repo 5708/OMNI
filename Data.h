@@ -19,7 +19,8 @@ public:
     vector<long> times;
 	
 	void read(string filename, int tNum, int ttLen);
-    void initial(int tLen, int fNum);
+	void readTestTS(int qsLen, int tstNum);
+    void reinitial(int tLen, int tstNum, int fNum);
 	void write(vector<int>* result);
     void testPick(int num);
     void writeTestTS(int i);

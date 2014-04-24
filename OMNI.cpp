@@ -50,11 +50,11 @@ void OMNI::subsequenceQuery(VectorXd qs, double epsilon)
 	
 
 }
-void OMNI::reinitial(int tLen, int fNum, int tstNum)
+void OMNI::reinitial(int tLen, int tstNum, int fNum)
 {
     cout<<"start reinitial"<<endl;
-    data.initial(tLen, fNum);
-    data.testPick(tstNum);
+    data.reinitial(tLen, tstNum, fNum);
+    //data.testPick(tstNum);
     forest.resize(0);
     forest.resize(fNum);
 	for(int i = 0; i < fNum; ++i)

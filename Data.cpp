@@ -22,7 +22,7 @@ void Data::read(string filename, int tNum, int ttLen)
 	file.close();
 }
 
-void Data::initial(int tLen, int fNum)
+void Data::reinitial(int tLen, int tstNum, int fNum)
 {
     int rRow, rCol, rID;
     MatrixXd tempM;
@@ -50,6 +50,8 @@ void Data::initial(int tLen, int fNum)
 			fd[i].col(j) = tempM.rowwise().operator-(fociTS.row(i)).array().square().matrix().rowwise().sum();
 		}
 	}
+
+	readTestTS(tLen, tstNum);
 }
 void Data::write(vector<int>* result)
 {
@@ -103,4 +105,44 @@ void Data::writeTestTS(int i)
     }
 		
 	file.close();
+}
+void Data::readTestTS(int qsLen, int tstNum)
+{
+	string filename;
+	ifstream file;
+	MatrixXd tempM;
+	VectorXd tempV;
+
+	testNum = tstNum;
+	if(qsLen == 11)
+	{
+		filename = "./Data/testTS1.txt";
+	}
+	else if(qsLen == 23)
+	{
+		filename = "./Data/testTS2.txt";
+	}
+	else if(qsLen = 46)
+	{
+		filename = "./Data/testTS3.txt";
+	}
+
+	file.open(filename.c_str());
+	if(!file)
+	{
+		cout<<"-------------------------"<<endl;
+		cout<<"file open fail"<<endl;
+		cout<<"-------------------------"<<endl;
+	}
+	testTS.resize(testNum, qsLen);
+	for(int i = 0; i < testNum; ++i)
+	{
+		for(int j = 0; j < qsLen; ++j)
+		{
+			file >> testTS(i,j);
+		}
+	}
+	file.close();
+	cout<<testTS.row(0);
+
 }

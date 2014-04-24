@@ -21,7 +21,7 @@ public:
 	
 	void initial(string filename, int tsNum, int ttLen);
 	void subsequenceQuery(VectorXd qs, double epsilon);
-    void reinitial(int tLen, int fNum, int tstNum);
+    void reinitial(int tLen, int tstNum, int fNum);
 
 
 private:
